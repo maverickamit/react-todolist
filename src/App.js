@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Displaylist from "./display.jsx";
-
+import "./App.css";
 class Addbar extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +16,7 @@ class Addbar extends Component {
   };
   render() {
     return (
-      <div>
+      <div id="myform">
         <form onSubmit={this.handleclick}>
           <input
             type="text"

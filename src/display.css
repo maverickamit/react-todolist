@@ -1,3 +1,15 @@
 button {
   margin: 10px;
+  color: #80453d;
+}
+button[type="button"]:hover {
+  background-color: red;
+  color: yellow;
+}
+button[type="submit"]:hover {
+  background-color: green;
+  color: yellow;
+}
+input[type="checkbox"] {
+  border: 1px solid green;
 }
