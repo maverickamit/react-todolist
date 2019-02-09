@@ -1,28 +1,41 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Displaylist from "./display.jsx";
 
-class App extends Component {
+class Addbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { list: [] };
+    this.handleclick = this.handleclick.bind(this);
+  }
+  handleclick = e => {
+    e.preventDefault();
+    this.state.list.push(e.target.list.value);
+    this.setState({ list: this.state.list });
+    document.getElementById("myInput").value = "";
+    console.log(this.state.list);
+  };
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <form onSubmit={this.handleclick}>
+          <input
+            type="text"
+            name="list"
+            size="30"
+            id="myInput"
+            placeholder="Write the task you want to add"
+            required
+          />
+          <span>
+            <button class="mybutton" type="submit">
+              Add
+            </button>
+          </span>
+        </form>
+        <Displaylist myList={this.state.list} />
       </div>
     );
   }
 }
 
-export default App;
+export default Addbar;
