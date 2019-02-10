@@ -26,7 +26,7 @@ class Displaylist extends Component {
                   >
                     Delete
                   </button>
-                  <input class="checkbox" type="checkbox" />
+                  <input id="check" type="checkbox" />
                 </span>
               </li>
             </div>
