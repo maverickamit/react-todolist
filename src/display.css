@@ -1,7 +1,12 @@
 button {
+  padding: 2px;
   margin: 10px;
   color: #80453d;
 }
+button[type="submit"] {
+  border-radius: 12px;
+}
+
 button[type="button"]:hover {
   background-color: red;
   color: yellow;
@@ -9,7 +14,10 @@ button[type="button"]:hover {
 button[type="submit"]:hover {
   background-color: green;
   color: yellow;
+  border-radius: 12px;
 }
-input[type="checkbox"] {
-  border: 1px solid green;
+li {
+  color: black;
+  font-size: medium;
+  font-weight: 600;
 }
